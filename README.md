@@ -9,7 +9,7 @@
 
 **Um aplicativo web moderno para gerenciamento de notas pessoais com autenticação segura**
 
-[🚀 Demo](#-como-executar) • [📖 Documentação](#-funcionalidades) • [🛠️ Tecnologias](#️-tecnologias-utilizadas) • [📷 Screenshots](#-screenshots)
+[🚀 Demo](#-como-executar) • [📖 Documentação](#-funcionalidades) • [🛠️ Tecnologias](#️-tecnologias-utilizadas) 
 
 </div>
 
