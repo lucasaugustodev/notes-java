@@ -98,24 +98,6 @@ docker build -t notes-app .
 docker run -p 8080:8080 notes-app
 ```
 
----
-
-## 📷 Screenshots
-
-### 🏠 Página de Login
-<div align="center">
-<img src="docs/images/login.png" alt="Login Page" width="600"/>
-</div>
-
-### 📊 Dashboard
-<div align="center">
-<img src="docs/images/dashboard.png" alt="Dashboard" width="600"/>
-</div>
-
-### ✏️ Editor de Notas
-<div align="center">
-<img src="docs/images/editor.png" alt="Note Editor" width="600"/>
-</div>
 
 ---
 
