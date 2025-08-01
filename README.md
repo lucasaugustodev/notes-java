@@ -1,91 +1,252 @@
-# Try Out Development Containers: Java
+# 📝 Notes App
 
-[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode-remote-try-java)
+<div align="center">
 
-A **development container** is a running container with a well-defined tool/runtime stack and its prerequisites. You can try out development containers with **[GitHub Codespaces](https://github.com/features/codespaces)** or **[Visual Studio Code Dev Containers](https://aka.ms/vscode-remote/containers)**.
+![Java](https://img.shields.io/badge/Java-11+-orange?style=for-the-badge&logo=java)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7.14-brightgreen?style=for-the-badge&logo=spring)
+![H2 Database](https://img.shields.io/badge/H2-Database-blue?style=for-the-badge&logo=h2)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.1.3-purple?style=for-the-badge&logo=bootstrap)
 
-This is a sample project that lets you try out either option in a few easy steps. We have a variety of other [vscode-remote-try-*](https://github.com/search?q=org%3Amicrosoft+vscode-remote-try-&type=Repositories) sample projects, too.
+**Um aplicativo web moderno para gerenciamento de notas pessoais com autenticação segura**
 
-> **Note:** If you already have a Codespace or dev container, you can jump to the [Things to try](#things-to-try) section.
+[🚀 Demo](#-como-executar) • [📖 Documentação](#-funcionalidades) • [🛠️ Tecnologias](#️-tecnologias-utilizadas) • [📷 Screenshots](#-screenshots)
 
-## Setting up the development container
+</div>
 
-### GitHub Codespaces
-Follow these steps to open this sample in a Codespace:
-1. Click the **Code** drop-down menu.
-2. Click on the **Codespaces** tab.
-3. Click **Create codespace on main**.
+---
 
-For more info, check out the [GitHub documentation](https://docs.github.com/en/free-pro-team@latest/github/developing-online-with-codespaces/creating-a-codespace#creating-a-codespace).
+## ✨ Funcionalidades
 
-### VS Code Dev Containers
+### 🔐 **Autenticação & Segurança**
+- ✅ Registro de usuários com validação completa
+- ✅ Login/logout seguro com Spring Security
+- ✅ Hash de senhas com BCrypt
+- ✅ Controle de sessões e proteção CSRF
+- ✅ Isolamento completo de dados por usuário
 
-If you already have VS Code and Docker installed, you can click the badge above or [here](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode-remote-try-java) to get started. Clicking these links will cause VS Code to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
+### 📋 **Gerenciamento de Notas**
+- ✅ Criar, editar, visualizar e excluir notas
+- ✅ Busca inteligente por título e conteúdo
+- ✅ Interface responsiva e intuitiva
+- ✅ Auto-save de rascunhos
+- ✅ Contador de caracteres em tempo real
 
-Follow these steps to open this sample in a container using the VS Code Dev Containers extension:
+### 🎨 **Interface Moderna**
+- ✅ Design responsivo com Bootstrap 5
+- ✅ Ícones Font Awesome
+- ✅ Animações suaves e feedback visual
+- ✅ Tema claro e profissional
+- ✅ Compatível com dispositivos móveis
 
-1. If this is your first time using a development container, please ensure your system meets the pre-reqs (i.e. have Docker installed) in the [getting started steps](https://aka.ms/vscode-remote/containers/getting-started).
+---
 
-2. To use this repository, you can either open the repository in an isolated Docker volume:
+## 🛠️ Tecnologias Utilizadas
 
-    - Press <kbd>F1</kbd> and select the **Dev Containers: Try a Sample...** command.
-    - Choose the "Java" sample, wait for the container to start, and try things out!
-        > **Note:** Under the hood, this will use the **Dev Containers: Clone Repository in Container Volume...** command to clone the source code in a Docker volume instead of the local filesystem. [Volumes](https://docs.docker.com/storage/volumes/) are the preferred mechanism for persisting container data.
+### Backend
+- **Java 11+** - Linguagem de programação
+- **Spring Boot 2.7.14** - Framework principal
+- **Spring Security** - Autenticação e autorização
+- **Spring Data JPA** - Persistência de dados
+- **H2 Database** - Banco de dados embarcado
+- **Maven** - Gerenciamento de dependências
 
-   Or open a locally cloned copy of the code:
+### Frontend
+- **Thymeleaf** - Template engine
+- **Bootstrap 5.1.3** - Framework CSS
+- **Font Awesome 6.0** - Ícones
+- **JavaScript ES6** - Interatividade
 
-   - Clone this repository to your local filesystem.
-   - Press <kbd>F1</kbd> and select the **Dev Containers: Open Folder in Container...** command.
-   - Select the cloned copy of this folder, wait for the container to start, and try things out!
+---
 
-## Things to try
+## 🚀 Como Executar
 
-Once you have this sample opened, you'll be able to work with it like you would locally.
+### Pré-requisitos
+- Java 11 ou superior
+- Maven 3.6+
+- Git
 
-Some things to try:
+### Instalação
 
-1. **Edit:**
-   - Open `src/main/java/com/mycompany/app/App.java`.
-   - Try adding some code and check out the language features.
-   - Make a spelling mistake and notice it is detected. The [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) extension was automatically installed because it is referenced in `.devcontainer/devcontainer.json`.
-   - Also notice that the [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack) is installed. The JDK is in the `mcr.microsoft.com/devcontainers/java` image and Dev Container settings and metadata are automatically picked up from [image labels](https://containers.dev/implementors/reference/#labels).
+1. **Clone o repositório**
+```bash
+git clone https://github.com/lucasaugustodev/notes-app.git
+cd notes-app
+```
 
-2. **Terminal:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>\`</kbd> and type `uname` and other Linux commands from the terminal window.
+2. **Compile o projeto**
+```bash
+mvn clean compile
+```
 
-3. **Build, Run, and Debug:**
-   - Open `src/main/java/com/mycompany/app/App.java`.
-   - Add a breakpoint.
-   - Press <kbd>F5</kbd> to launch the app in the container.
-   - Once the breakpoint is hit, try hovering over variables, examining locals, and more.
+3. **Execute a aplicação**
+```bash
+mvn spring-boot:run
+```
 
-4. **Run a Test:**
-   - Open `src/test/java/com/mycompany/app/AppTest.java`.
-   - Put a breakpoint in a test.
-   - Click the `Debug Test` in the Code Lens above the function and watch it hit the breakpoint.
+4. **Acesse no navegador**
+```
+http://localhost:8080
+```
 
-5. **Install Node.js using a Dev Container Feature:**
-   - Press <kbd>F1</kbd> and select the **Dev Containers: Configure Container Features...** or **Codespaces: Configure Container Features...** command.
-   - Type "node" in the text box at the top.
-   - Check the check box next to "Node.js (via nvm) and yarn" (published by devcontainers) 
-   - Click OK
-   - Press <kbd>F1</kbd> and select the **Dev Containers: Rebuild Container** or **Codespaces: Rebuild Container** command so the modifications are picked up.
+### 🐳 Docker (Opcional)
 
-  
-## Contributing
+```bash
+# Build da imagem
+docker build -t notes-app .
 
-This project welcomes contributions and suggestions. Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
+# Executar container
+docker run -p 8080:8080 notes-app
+```
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+---
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+## 📷 Screenshots
 
-## License
+### 🏠 Página de Login
+<div align="center">
+<img src="docs/images/login.png" alt="Login Page" width="600"/>
+</div>
 
-Copyright © Microsoft Corporation All rights reserved.<br />
-Licensed under the MIT License. See LICENSE in the project root for license information.
+### 📊 Dashboard
+<div align="center">
+<img src="docs/images/dashboard.png" alt="Dashboard" width="600"/>
+</div>
+
+### ✏️ Editor de Notas
+<div align="center">
+<img src="docs/images/editor.png" alt="Note Editor" width="600"/>
+</div>
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── main/
+│   ├── java/com/mycompany/app/
+│   │   ├── config/          # Configurações Spring
+│   │   ├── controller/      # Controllers REST/Web
+│   │   ├── entity/          # Entidades JPA
+│   │   ├── repository/      # Repositórios Spring Data
+│   │   ├── security/        # Configurações de segurança
+│   │   ├── service/         # Lógica de negócio
+│   │   └── App.java         # Classe principal
+│   └── resources/
+│       ├── static/          # CSS, JS, imagens
+│       ├── templates/       # Templates Thymeleaf
+│       └── application.properties
+└── test/                    # Testes unitários
+```
+
+---
+
+## 🔧 Configuração
+
+### Banco de Dados
+O projeto usa H2 Database por padrão. Para alterar:
+
+```properties
+# application.properties
+spring.datasource.url=jdbc:h2:file:./notes.db
+spring.datasource.driver-class-name=org.h2.Driver
+spring.jpa.hibernate.ddl-auto=update
+```
+
+### Porta do Servidor
+```properties
+server.port=8080
+```
+
+### Logs
+```properties
+logging.level.com.mycompany.app=DEBUG
+```
+
+---
+
+## 🧪 Testes
+
+```bash
+# Executar todos os testes
+mvn test
+
+# Executar com coverage
+mvn test jacoco:report
+```
+
+---
+
+## 📚 API Endpoints
+
+### Autenticação
+- `GET /login` - Página de login
+- `POST /login` - Processar login
+- `GET /register` - Página de registro
+- `POST /register` - Processar registro
+- `POST /logout` - Logout
+
+### Notas
+- `GET /dashboard` - Dashboard principal
+- `GET /notes/new` - Formulário nova nota
+- `POST /notes` - Criar nota
+- `GET /notes/{id}` - Visualizar nota
+- `GET /notes/{id}/edit` - Editar nota
+- `POST /notes/{id}` - Atualizar nota
+- `POST /notes/{id}/delete` - Excluir nota
+
+---
+
+## 🤝 Contribuindo
+
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+---
+
+## 📋 Roadmap
+
+- [ ] 📱 App mobile com React Native
+- [ ] 🌙 Modo escuro
+- [ ] 📎 Upload de arquivos/imagens
+- [ ] 🏷️ Sistema de tags
+- [ ] 📤 Exportar notas (PDF, Markdown)
+- [ ] 🔄 Sincronização em nuvem
+- [ ] 👥 Compartilhamento de notas
+- [ ] 🔍 Busca avançada com filtros
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+## 👨‍💻 Autor
+
+**Lucas Augusto**
+- GitHub: [@lucasaugustodev](https://github.com/lucasaugustodev)
+- Email: augustolucasg@gmail.com
+
+---
+
+## 🙏 Agradecimentos
+
+- [Spring Boot](https://spring.io/projects/spring-boot) - Framework incrível
+- [Bootstrap](https://getbootstrap.com/) - CSS framework
+- [Font Awesome](https://fontawesome.com/) - Ícones lindos
+- [H2 Database](https://www.h2database.com/) - Banco de dados rápido
+
+---
+
+<div align="center">
+
+**⭐ Se este projeto te ajudou, considere dar uma estrela!**
+
+Made with ❤️ and ☕ by [Lucas Augusto](https://github.com/lucasaugustodev)
+
+</div>
